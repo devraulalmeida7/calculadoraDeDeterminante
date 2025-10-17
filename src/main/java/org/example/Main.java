@@ -3,14 +3,15 @@ package org.example;
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 import static org.example.EliminacaoDeGauss.determinante;
 
 
 public class Main {
     public static void main(String[] args) {
 
-
-        // rows and columns
+        // define rows and colums
+        // definir linhas e colunas
         Scanner leitura = new Scanner(System.in);
 
         System.out.println("Type the number of rows:");
@@ -18,16 +19,12 @@ public class Main {
         System.out.println("Type the number of columns:");
         int cols = leitura.nextInt();
 
-
-
-
-
+        // matrix
         double[][] matriz = new double[rows][cols];
 
-        int n = matriz.length;
-        double det = 1.0;
-        int trocas = 0;
 
+        // inserir entrada para as matrizes
+        // insert matrix data
         System.out.println("Please enter the matrix data: ");
 
         for (int i = 0; i < rows; i++) {
@@ -37,20 +34,21 @@ public class Main {
 
         }
 
+        System.out.println("A matriz inserida é:" +Arrays.deepToString(matriz));
 
         double resultado =   determinante(matriz);
 
 
-        for (double[] r : matriz) {
-            for (double x : r) {
-                System.out.println(x + " ");
-            }
-            System.out.println();
-        }
+//        for (double[] r : matriz) {
+//            for (double x : r) {
+//                System.out.println(x + " ");
+//            }
+//            System.out.println();
+//        }
 
 
-        System.out.println(Arrays.deepToString(matriz));
-        System.out.println(resultado);
+
+        System.out.println("A determinante da matriz é: "+ Math.round(resultado));
     }
 
 
