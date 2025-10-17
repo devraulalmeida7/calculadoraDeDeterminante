@@ -39,15 +39,6 @@ public class Main {
         double resultado =   determinante(matriz);
 
 
-//        for (double[] r : matriz) {
-//            for (double x : r) {
-//                System.out.println(x + " ");
-//            }
-//            System.out.println();
-//        }
-
-
-
         System.out.println("A determinante da matriz é: "+ Math.round(resultado));
     }
 
